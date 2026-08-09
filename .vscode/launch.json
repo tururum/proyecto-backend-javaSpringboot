@@ -9,6 +9,16 @@
             "projectName": "studentservice",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GroupserviceApplication<groupservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.karmantial.groupservice.GroupserviceApplication",
+            "projectName": "groupservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
