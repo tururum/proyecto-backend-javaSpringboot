@@ -1,0 +1,22 @@
+info:
+  name: PostStudent
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{studentservice}}/students"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "Amaru",
+        "lastName": "Fernandez"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

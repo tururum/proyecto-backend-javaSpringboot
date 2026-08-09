@@ -1,0 +1,8 @@
+name: API
+variables:
+  - name: studentservice
+    value: http://localhost:8080
+    description: ""
+  - name: groupservice
+    value: http://localhost:8081
+    description: ""
