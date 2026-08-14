@@ -5,8 +5,7 @@ services:
     image: docker.io/library/mysql:latest
     container_name: mysql-studentservice
     environment:
-      MYSQL_ROOT_PASSWORD: Karma30102001.
-      # uncomment below if you want to automatically create and select a database
+      MYSQL_ROOT_PASSWORD: password
       # MYSQL_DATABASE: my_database
     ports:
       - "3306:3306"
