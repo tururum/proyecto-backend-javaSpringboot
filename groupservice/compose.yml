@@ -6,7 +6,6 @@ services:
     container_name: mysql-groupservice
     environment:
       MYSQL_ROOT_PASSWORD: password
-      # uncomment below if you want to automatically create and select a database
       # MYSQL_DATABASE: my_database
     ports:
       - "3307:3306"
