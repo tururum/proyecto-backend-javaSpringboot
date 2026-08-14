@@ -6,9 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import com.karmantial.studentservice.model.Student;
 
+import java.util.Optional;
 
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
-
+    Optional<Student> findByTelefono(String telefono);
 }

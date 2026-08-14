@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -42,12 +41,15 @@ public class StudentController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Student> editStudent(@RequestBody Student student, @PathVariable Long id) {
-        return ResponseEntity.ok(studentService.editStudent(student, id)).notFound().build();
+        return ResponseEntity.ok(studentService.editStudent(student, id));
     }
     
     @DeleteMapping("/{id}")
-    public void deleteStudent(@PathVariable Long id){
-        studentService.deleteStudent(id);
+    public ResponseEntity<String> deleteStudent(@PathVariable Long id){
+        if (studentService.deleteStudent(id)) {
+            return ResponseEntity.ok("Usuario eliminado");
+        }
+        return ResponseEntity.ok("Usuario no encontrado");
     }
 }   
 

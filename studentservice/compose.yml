@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   mysql:
-    image: mysql:latest
+    image: docker.io/library/mysql:latest
     container_name: mysql-studentservice
     environment:
       MYSQL_ROOT_PASSWORD: Karma30102001.

@@ -13,6 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,4 +24,8 @@ public class Student {
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
+
+    @Column(name = "telefono", nullable = false)
+    private String telefono;
+
 }
